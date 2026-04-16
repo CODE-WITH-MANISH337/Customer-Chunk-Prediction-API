@@ -56,7 +56,7 @@ Predict class for input message.
 **Response:**
 ```json
 {
-  "prediction": 0  // or 1 (binary class)
+  "prediction": "Postive" 
 }
 ```
 
