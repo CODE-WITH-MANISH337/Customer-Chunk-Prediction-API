@@ -75,6 +75,8 @@ def predict(data:InputData):
     input_text=preprocessing(input_text)
 
     input_text = tf.transform([input_text])
-    prediction = model.predict(input_text)[0]
-
-    return {'prediction':int(prediction)}
+    prediction = int(model.predict(input_text)[0])
+    if prediction==1:
+        return {'prediction':'Postive'}
+    else:
+        return {'prediction':'Negative'}
